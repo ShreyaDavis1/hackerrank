@@ -1,0 +1,36 @@
+Given a square matrix of sizeN*N , calculate the absolute difference between the sums of its diagonals.
+
+
+#include <math.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
+#include <assert.h>
+#include <limits.h>
+#include <stdbool.h>
+
+int main(){
+    int n,ad=0,sum=0,result,a_i; 
+    scanf("%d",&n);
+    int a[n][n];
+    for(int a_i = 0; a_i < n; a_i++){
+       for(int a_j = 0; a_j < n; a_j++){
+          
+          scanf("%d",&a[a_i][a_j]);
+        
+        }
+       }
+       for (a_i = 0; a_i < n; ++a_i)
+        {
+            sum = sum + a[a_i][a_i];
+            
+            ad = ad + a[a_i][n - a_i - 1];
+               
+    }
+    result=sum - ad ;
+          
+                
+               printf("%d  ",abs(result));
+    
+    return 0;
+}
